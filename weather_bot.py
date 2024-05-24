@@ -32,7 +32,7 @@ def start(message):
     button1 = types.InlineKeyboardButton("°C", callback_data='mode1')
     button2 = types.InlineKeyboardButton("°F", callback_data='mode2')
     markup.add(button1, button2)
-    bot.send_message(message.chat.id, "Welcome to our bot!")
+    bot.send_message(message.chat.id, "Welcome to our bot! Enter city name")
     bot.send_message(message.chat.id, "Please choose a mode:", reply_markup=markup)
 
 @bot.callback_query_handler(func=lambda call: call.data.startswith('m'))
